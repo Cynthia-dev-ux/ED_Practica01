@@ -7,9 +7,27 @@ triangulo b h = sqrt (((b)^2 + (h)^2))
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1 , y1) (x2 , y2) = (y2 - y1)/ (x2 - x1)
 
-raices :: (Float) -> (Float) -> (Float) -> Float
-raices a b c = ((-2)sqrt (((b)^2-(4(a*c)))/2*a)) 
+raices :: (Float) -> (Float) -> (Float) -> (Float, Float)
+raices a b c = ((((-b+(sqrt(b^2-(4*a*c))))/2*a)), (((-b-(sqrt(b^2-(4*a*c))))/2*a)))
 
 
 areaTriangulo :: Float -> Float -> Float -> Float
 areaTriangulo x y z = sqrt(((x+y+z)/2)*(((x+y+z)/2)-x)*(((x+y+z)/2)-y)*(((x+y+z)/2)-z))
+
+comparador :: Int -> Int -> Int
+comparador x y = if x == y 
+then 0
+else if x < y 
+then -1
+else 1
+
+maximo :: Int -> Int -> Int -> Int
+maximo x y z =  if x > y && x > z
+then x
+else if y > x && y > z
+then y
+else z
+
+esDescendente :: Int -> Int -> Int -> Int -> Bool
+esDescendente x y z w = if x > y && y > z && z > w then True 
+else  False
