@@ -1,8 +1,8 @@
 distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
 distanciaPuntos (x1 , y1) (x2, y2) = sqrt(((x2-x1)^2 + (y2-y1)^2))
 
-triangulo :: (Float) -> (Float) ->Float
-triangulo b h = sqrt (((b)^2 + (h)^2)) 
+hipotenusa:: (Float) -> (Float) ->Float
+hipotenusa b h = sqrt (((b)^2 + (h)^2)) 
 
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1 , y1) (x2 , y2) = (y2 - y1)/ (x2 - x1)
